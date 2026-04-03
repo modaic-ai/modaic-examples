@@ -1,0 +1,6 @@
+{"context":"The parties agree to resolve disputes through binding arbitration under the terms in section 8.","label":"legal","reason":"Dispute resolution and arbitration language indicate a legal document."}
+{"context":"Refill request: albuterol inhaler, two puffs every four to six hours as needed for wheezing.","label":"healthcare","reason":"Medication refill instructions are healthcare content."}
+{"context":"I wrote in my journal about feeling calmer after the walk and calling my sister.","label":"personal","reason":"A private journal entry is personal content."}
+{"context":"Include the capital gains worksheet when you prepare the federal return for this client.","label":"tax","reason":"Federal returns and capital gains worksheets are tax preparation cues."}
+{"context":"The conference agenda lists keynote speakers, sponsor booths, and networking breaks.","label":"other","reason":"An event agenda is general content outside the target labels."}
+{"context":"This document outlines you healthcare benefits and tax liability for the year 2025","label":"tax","reason":"Although it talks about healthcare this document is tax-related."}

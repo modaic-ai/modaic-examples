@@ -1,0 +1,6 @@
+{"context":"This master services agreement describes indemnification, venue, and termination terms for both parties.","label":"legal","reason":"Contracts, indemnification, and venue clauses are legal drafting cues."}
+{"context":"Patient discharge instructions include dosage guidance, follow-up care, and symptoms that require emergency attention.","label":"healthcare","reason":"The text is clinical and focused on patient care instructions."}
+{"context":"Happy birthday, Dad. Dinner is at 7 and we saved you a slice of cake.","label":"personal","reason":"This is informal person-to-person communication with no professional domain markers."}
+{"context":"Please review the attached 1099-NEC amounts before filing your quarterly estimated payments.","label":"tax","reason":"1099 forms, filing, and estimated payments are tax-specific cues."}
+{"context":"The product launch deck summarizes pricing tiers, customer personas, and release milestones.","label":"other","reason":"This is general business content, not legal, healthcare, personal, or tax material."}
+{"context":"Your healthcare reimbursemnt for this year is $1000","label":"tax","reason":"Although it talks about healthcare this document is tax-related."}
