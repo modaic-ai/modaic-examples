@@ -3,8 +3,13 @@ name = "spam-classification"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 dependencies = [
     "datasets>=4.8.4",
-    "modaic>=0.30.0",
+    "modaic>=0.31.1",
+    # "modaic-client>=0.31.0"
 ]
+
+# [tool.uv.sources]
+# modaic = {path = "../../core/modaic/src/modaic-sdk", editable = true}
+# modaic-client = {path = "../../core/modaic/src/modaic-client", editable = true}

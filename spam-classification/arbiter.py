@@ -11,7 +11,18 @@ class SpamClassifier(dspy.Signature):
 
 
 classifier = modaic.Predict(
-    SpamClassifier, lm=dspy.LM(model="together_ai/openai/gpt-oss-120b")
+    SpamClassifier, lm=modaic.SafeLM(model="together_ai/openai/gpt-oss-120b")
 ).as_arbiter()
 
-classifier.push_to_hub("tytodd/spam-classification")
+
+result = classifier(
+    subject="You won a free flight to paris",
+    body="Dear Sir or Madam, \n We have been trying to contact you regarding your car's extended warranty",
+    return_messages=True,
+)
+print("Is Spam:", result.is_spam)
+print("Messages:", result._messages)
+print("Outputs:", result._outputs)
+
+# classifier.push_to_hub("tytodd/spam-classification")
+classifier.push_to_hub("tyrin/spam-classification")
