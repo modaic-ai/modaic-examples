@@ -3,7 +3,9 @@ from modaic import Arbiter
 
 dataset = load_dataset("UniqueData/email-spam-classification")["train"]
 
-arbiter = Arbiter("tyrin/spam-classification")
+# User Arbiter to run your arbiter via modaic's backend (make sure you have set a TOGETHER_API_KEY in Settings > Environment Variables)
+# # Replace <username> with your username
+arbiter = Arbiter("<username>/spam-classification")
 
 
 def add_prediction(row):
@@ -12,6 +14,7 @@ def add_prediction(row):
     return row
 
 
+# Map over the hf dataset getting a prediction for each row
 dataset = dataset.map(add_prediction)
 
 dataset.save_to_disk("predictions")

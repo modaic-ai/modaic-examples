@@ -2630,12 +2630,14 @@ source = { virtual = "." }
 dependencies = [
     { name = "datasets" },
     { name = "modaic" },
+    { name = "modaic-client" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "datasets", specifier = ">=4.8.4" },
     { name = "modaic", editable = "../../core/modaic/src/modaic-sdk" },
+    { name = "modaic-client", editable = "../../core/modaic/src/modaic-client" },
 ]
 
 [[package]]
