@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.10"
 resolution-markers = [
     "python_full_version >= '3.14' and sys_platform == 'win32'",
@@ -1189,7 +1189,8 @@ wheels = [
 
 [[package]]
 name = "modaic"
-source = { editable = "../../core/modaic/src/modaic-sdk" }
+version = "0.31.1"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "dspy" },
     { name = "gitpython" },
@@ -1198,67 +1199,23 @@ dependencies = [
     { name = "safetensors" },
     { name = "tomlkit" },
 ]
-
-[package.metadata]
-requires-dist = [
-    { name = "anthropic", marker = "extra == 'anthropic'", specifier = ">=0.40.0" },
-    { name = "anthropic", marker = "extra == 'batch'", specifier = ">=0.40.0" },
-    { name = "cloudpickle", marker = "extra == 'batch'", specifier = ">=3.0.0" },
-    { name = "datasets", marker = "extra == 'batch'" },
-    { name = "datasets", marker = "extra == 'vllm'" },
-    { name = "dspy", specifier = ">=3.1.0" },
-    { name = "duckdb", marker = "extra == 'anthropic'", specifier = ">=1.2.0" },
-    { name = "duckdb", marker = "extra == 'azure'", specifier = ">=1.2.0" },
-    { name = "duckdb", marker = "extra == 'batch'", specifier = ">=1.2.0" },
-    { name = "duckdb", marker = "extra == 'fireworks'", specifier = ">=1.2.0" },
-    { name = "duckdb", marker = "extra == 'modal'", specifier = ">=1.2.0" },
-    { name = "duckdb", marker = "extra == 'openai'", specifier = ">=1.2.0" },
-    { name = "duckdb", marker = "extra == 'together'", specifier = ">=1.2.0" },
-    { name = "duckdb", marker = "extra == 'vllm'", specifier = ">=1.2.0" },
-    { name = "gitpython", specifier = ">=3.1.45" },
-    { name = "hf-transfer", marker = "extra == 'batch'" },
-    { name = "hf-transfer", marker = "extra == 'vllm'" },
-    { name = "hf-xet", marker = "extra == 'batch'", specifier = ">=1.1.7" },
-    { name = "hf-xet", marker = "extra == 'vllm'", specifier = ">=1.1.7" },
-    { name = "httpx", marker = "extra == 'anthropic'", specifier = ">=0.27.0" },
-    { name = "httpx", marker = "extra == 'batch'", specifier = ">=0.27.0" },
-    { name = "httpx", marker = "extra == 'fireworks'", specifier = ">=0.27.0" },
-    { name = "huggingface-hub", marker = "extra == 'batch'" },
-    { name = "huggingface-hub", marker = "extra == 'vllm'" },
-    { name = "lmdb", marker = "extra == 'batch'", specifier = ">=1.4.0" },
-    { name = "modaic-client", editable = "../../core/modaic/src/modaic-client" },
-    { name = "modal", marker = "extra == 'batch'" },
-    { name = "modal", marker = "extra == 'modal'" },
-    { name = "openai", marker = "extra == 'azure'", specifier = ">=1.0.0" },
-    { name = "openai", marker = "extra == 'batch'", specifier = ">=1.0.0" },
-    { name = "openai", marker = "extra == 'openai'", specifier = ">=1.0.0" },
-    { name = "pandas", marker = "extra == 'batch'" },
-    { name = "pandas", marker = "extra == 'modal'" },
-    { name = "pandas", marker = "extra == 'vllm'" },
-    { name = "python-frontmatter", specifier = ">=1.1.0" },
-    { name = "safetensors", specifier = ">=0.7.0" },
-    { name = "together", marker = "extra == 'batch'", specifier = ">=2.0.0a17" },
-    { name = "together", marker = "extra == 'together'", specifier = ">=2.0.0a17" },
-    { name = "tomlkit", specifier = ">=0.13.3" },
-    { name = "vllm", marker = "extra == 'batch'", specifier = ">=0.18.0" },
-    { name = "vllm", marker = "extra == 'vllm'", specifier = ">=0.18.0" },
+sdist = { url = "https://files.pythonhosted.org/packages/64/1b/cd3b28a7dfafe64ce2eb91607e954a63e02c80b3ed9d90e94d4f0975109e/modaic-0.31.1.tar.gz", hash = "sha256:134f26d604fd5b7fc7568ca9ef21d3542297be3d49d04905fc017c094e2bb5ba", size = 69700, upload-time = "2026-04-04T17:05:05.433Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ad/74/c7d5ea8358cb17fcf65d8a5d26c952ed32746cdab07040793fa75c9b1e7a/modaic-0.31.1-py3-none-any.whl", hash = "sha256:c6c0e65c6490152ed57c915a72512262d28cb40f4ec6e5457b61f5a55d5e0d45", size = 91628, upload-time = "2026-04-04T17:05:02.508Z" },
 ]
-provides-extras = ["anthropic", "azure", "batch", "fireworks", "modal", "openai", "together", "vllm"]
 
 [[package]]
 name = "modaic-client"
-source = { editable = "../../core/modaic/src/modaic-client" }
+version = "0.31.1"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "httpx" },
     { name = "platformdirs" },
     { name = "pydantic-settings" },
 ]
-
-[package.metadata]
-requires-dist = [
-    { name = "httpx", specifier = ">=0.27.0" },
-    { name = "platformdirs", specifier = ">=4.3.8" },
-    { name = "pydantic-settings", specifier = ">=2.13.0" },
+sdist = { url = "https://files.pythonhosted.org/packages/a6/14/c2a3e05069a510c1981e91c39ab7e9c1b2ce8d5e2bd2fb65cbc5f4855fd6/modaic_client-0.31.1.tar.gz", hash = "sha256:f39f9c210b7575278fd2c688c50f4b621a74782fe4c11255f01d8da080671b91", size = 6951, upload-time = "2026-04-04T17:05:06.716Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/7e/45/fd27b94b7de4d69b64c1aa1ac6313217d8d2f1c0c8b33ed060b1ab932828/modaic_client-0.31.1-py3-none-any.whl", hash = "sha256:0b299368f58d103c58afd6e3e9c497b06200f891d5542e278136514220f03267", size = 8360, upload-time = "2026-04-04T17:05:04.211Z" },
 ]
 
 [[package]]
@@ -2636,8 +2593,8 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "datasets", specifier = ">=4.8.4" },
-    { name = "modaic", editable = "../../core/modaic/src/modaic-sdk" },
-    { name = "modaic-client", editable = "../../core/modaic/src/modaic-client" },
+    { name = "modaic", specifier = ">=0.31.1" },
+    { name = "modaic-client", specifier = ">=0.31.1" },
 ]
 
 [[package]]
