@@ -9,7 +9,3 @@ dependencies = [
     "modaic>=0.31.1",
     "modaic-client>=0.31.1"
 ]
-
-[tool.uv.sources]
-modaic = {path = "../../core/modaic/src/modaic-sdk", editable = true}
-modaic-client = {path = "../../core/modaic/src/modaic-client", editable = true}
