@@ -4,8 +4,8 @@ from modaic import Arbiter
 dataset = load_dataset("UniqueData/email-spam-classification")["train"]
 
 # User Arbiter to run your arbiter via modaic's backend (make sure you have set a TOGETHER_API_KEY in Settings > Environment Variables)
-# # Replace <username> with your username
-arbiter = Arbiter("<username>/spam-classification")
+# # Replace tyrin with your username
+arbiter = Arbiter("tyrin/spam-classification")
 
 
 def add_prediction(row):

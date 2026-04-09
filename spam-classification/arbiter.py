@@ -29,5 +29,5 @@ print("Is Spam:", result.is_spam)
 print("Messages:", result._messages)
 print("Outputs:", result._outputs)
 
-# Push arbiter to modaic hub (replace <username> with your modaic username)
-classifier.push_to_hub("<username>/spam-classification")
+# Push arbiter to modaic hub (replace tyrin with your modaic username)
+classifier.push_to_hub("tyrin/spam-classification")

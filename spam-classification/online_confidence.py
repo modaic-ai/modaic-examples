@@ -1,7 +1,7 @@
 from modaic import Arbiter
 
-# Replace <username> with your Modaic username
-arbiter = Arbiter("<username>/spam-classification")
+# Replace tyrin with your Modaic username
+arbiter = Arbiter("tyrin/spam-classification")
 
 result = arbiter(
     subject="You won a free flight to paris",
