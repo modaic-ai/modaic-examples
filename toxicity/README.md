@@ -7,7 +7,7 @@ This example walks through building a toxicity classification arbiter using [or-
 You will learn how to:
 1. Define and publish an arbiter to Modaic Hub
 2. Run the arbiter over a real dataset
-3. Use Modaic's **Calibrate** feature to generate confidence scores and catch mislabeled predictions
+3. Use Modaic's **Reflect** feature to generate confidence scores and catch mislabeled predictions
 
 ## Step 1. Define the Arbiter
 
@@ -45,8 +45,8 @@ arbiter = modaic.Predict(
     ToxicityJudge, lm=dspy.LM("openrouter/openai/gpt-oss-120b")
 ).as_arbiter()
 
-# Push to Modaic Hub — replace "tyrin" with your username
-arbiter.push_to_hub("tyrin/toxicity")
+# Push to Modaic Hub — replace "<username>" with your username
+arbiter.push_to_hub("<username>/toxicity")
 ```
 
 Run the script to publish the arbiter:
@@ -76,7 +76,7 @@ dataset = load_dataset("bench-llm/or-bench", "or-bench-toxic", split="train")
 dataset = dataset.shuffle(seed=42).select(range(100))
 
 # Load the arbiter from Modaic Hub
-arbiter = Arbiter("tyrin/toxicity")
+arbiter = Arbiter("<username>/toxicity")
 
 
 def add_prediction(row, idx):
@@ -99,9 +99,9 @@ uv run predict.py
 
 The predictions will be saved to `./data/or-bench-predictions`.
 
-## Step 3. Calibrate Confidence Scores
+## Step 3. Extract Confidence Scores
 
-Once the predictions are uploaded, open the repository on [Modaic Hub](https://www.modaic.dev/) and navigate to the **Annotations** tab. Click **Calibrate** to generate a confidence score for each prediction. This may take a few minutes.
+Once the predictions are uploaded, open the repository on [Modaic Hub](https://www.modaic.dev/) and navigate to the **Annotations** tab. Click **Reflect** to generate a confidence score for each prediction. This may take a few minutes.
 
 When complete, you'll see confidence scores alongside each annotation. By default, Modaic highlights predictions below your configured confidence threshold — you can adjust this in the repository settings.
 
@@ -133,4 +133,4 @@ Looking at the reasoning, the judge was torn between `violence` and `harassment`
 
 ## Going Further: Align
 
-This example covered defining an arbiter, running it over real data, and using **Calibrate** to surface low-confidence predictions. The next step is **Align**: after you review and label a handful of flagged examples, click **Align** to fine-tune both the judge and the confidence estimator to your labeling preferences. The more feedback you provide, the better the arbiter gets — both at making the right call and at knowing when it's uncertain.
+This example covered defining an arbiter, running it over real data, and using **Reflect** to surface low-confidence predictions. The next step is **Align**: after you review and label a handful of flagged examples, click **Align** to fine-tune both the judge and the confidence estimator to your labeling preferences. The more feedback you provide, the better the arbiter gets — both at making the right call and at knowing when it's uncertain.
