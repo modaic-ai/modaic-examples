@@ -1,6 +1,6 @@
 # LLM Toxicity Judge
 
-This example walks through building a toxicity classification arbiter using [or-bench-toxic](https://huggingface.co/datasets/bench-llm/or-bench/viewer/or-bench-toxic) — a benchmark dataset of user message requests labeled with one of the following categories:
+This example walks through building a toxicity classification arbiter using <a href="https://huggingface.co/datasets/bench-llm/or-bench/viewer/or-bench-toxic" target="_blank">or-bench-toxic</a> — a benchmark dataset of user message requests labeled with one of the following categories:
 
 - `self-harm`, `deception`, `harassment`, `sexual`, `violence`, `unethical`, `privacy`, `hate`, `illegal`, `harmful`
 
@@ -13,14 +13,14 @@ You will learn how to:
 
 Before running the examples, make sure you have the following:
 
-1. Sign up for a [Modaic account](https://www.modaic.dev/auth/signup) with access code: **sr006:)**
-2. Grab a token from your [Modaic account settings](https://www.modaic.dev/settings/tokens)
+1. Sign up for a <a href="https://www.modaic.dev/auth/signup" target="_blank">Modaic account</a> with access code: **sr006:)**
+2. Grab a token from your <a href="https://www.modaic.dev/settings/tokens" target="_blank">Modaic account settings</a>
 3. Set the `MODAIC_TOKEN` environment variable in your `.env` file
-4. Set the required environment variables for your LLM provider in [Modaic environment variables](https://www.modaic.dev/settings/environment-variables)
+4. Set the required environment variables for your LLM provider in <a href="https://www.modaic.dev/settings/environment-variables" target="_blank">Modaic environment variables</a>
 
 ## Step 1. Define the Arbiter
 
-[arbiter.py](./arbiter.py)
+<a href="./arbiter.py" target="_blank">arbiter.py</a>
 
 We use `dspy.Signature` to define the judge. The output field is constrained to the allowed labels using `typing.Literal`, which Modaic uses to enforce structured outputs.
 
@@ -64,11 +64,11 @@ Run the script to publish the arbiter:
 uv run arbiter.py
 ```
 
-This creates a new repository on [Modaic Hub](https://www.modaic.dev/). Make sure `MODAIC_TOKEN` is set in your `.env` file before running.
+This creates a new repository on <a href="https://www.modaic.dev/" target="_blank">Modaic Hub</a>. Make sure `MODAIC_TOKEN` is set in your `.env` file before running.
 
 ## Step 2. Generate Predictions
 
-[predict.py](./predict.py)
+<a href="./predict.py" target="_blank">predict.py</a>
 
 Now we load the dataset, run the arbiter over 100 examples, and save the predictions to disk.
 
@@ -110,7 +110,7 @@ The predictions will be saved to `./data/or-bench-predictions`.
 
 ## Step 3. Extract Confidence Scores
 
-Once the predictions are uploaded, open the repository on [Modaic Hub](https://www.modaic.dev/) and navigate to the **Annotations** tab. Click **Reflect** to generate a confidence score for each prediction. This may take a few minutes.
+Once the predictions are uploaded, open the repository on <a href="https://www.modaic.dev/" target="_blank">Modaic Hub</a> and navigate to the **Annotations** tab. Click **Reflect** to generate a confidence score for each prediction. This may take a few minutes.
 
 When complete, you'll see confidence scores alongside each annotation. By default, Modaic highlights predictions below your configured confidence threshold — you can adjust this in the repository settings.
 
