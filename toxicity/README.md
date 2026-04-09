@@ -142,4 +142,4 @@ Looking at the reasoning, the judge was torn between `violence` and `harassment`
 
 ## Going Further: Align
 
-This example covered defining an arbiter, running it over real data, and using **Reflect** to surface low-confidence predictions. The next step is **Align**: after you review and label a handful of flagged examples, click **Align** to fine-tune both the judge and the confidence estimator to your labeling preferences. The more feedback you provide, the better the arbiter gets — both at making the right call and at knowing when it's uncertain.
+This example covered defining an arbiter, running it over real data, and using **Reflect** to surface low-confidence predictions. The next step is **Align**: after you review and label a handful of flagged examples, click **Align** to optimize both the judge and the confidence estimator to your labeling preferences. The more feedback you provide, the better the arbiter gets — both at making the right call and at knowing when it's uncertain.
