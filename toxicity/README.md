@@ -16,7 +16,7 @@ Before running the examples, make sure you have the following:
 1. Sign up for a <a href="https://www.modaic.dev/auth/signup" target="_blank">Modaic account</a> with access code: **sr006:)**
 2. Grab a token from your <a href="https://www.modaic.dev/settings/tokens" target="_blank">Modaic account settings</a> with **FULL ACCESS** permissions
 3. Set the `MODAIC_TOKEN` environment variable in your `.env` file
-4. Set the required environment variables for your LLM provider in <a href="https://www.modaic.dev/settings/environment-variables" target="_blank">Modaic environment variables</a>
+4. Set the required environment variables for your LLM provider in <a href="https://www.modaic.dev/settings/env-vars" target="_blank">Modaic environment variables</a>
 
 ## Step 1. Define the Arbiter
 
