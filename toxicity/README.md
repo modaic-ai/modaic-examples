@@ -9,6 +9,15 @@ You will learn how to:
 2. Run the arbiter over a real dataset
 3. Use Modaic's **Reflect** feature to generate confidence scores and catch mislabeled predictions
 
+## Step 0. Setup
+
+Before running the examples, make sure you have the following:
+
+1. Sign up for a [Modaic account](https://www.modaic.dev/auth/signup) with access code: **sr006:)**
+2. Grab a token from your [Modaic account settings](https://www.modaic.dev/settings/tokens)
+3. Set the `MODAIC_TOKEN` environment variable in your `.env` file
+4. Set the required environment variables for your LLM provider in [Modaic environment variables](https://www.modaic.dev/settings/environment-variables)
+
 ## Step 1. Define the Arbiter
 
 [arbiter.py](./arbiter.py)
