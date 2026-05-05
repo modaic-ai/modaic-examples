@@ -1,0 +1,50 @@
+{
+  "builder_name": "csv",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "email-spam-classification",
+  "dataset_size": 76238,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/UniqueData/email-spam-classification@f9c3f31e0ab812ee86f17d9e497c3a35bcb7c200/email_spam.csv": {
+      "num_bytes": 75702,
+      "checksum": null
+    }
+  },
+  "download_size": 75702,
+  "features": {
+    "title": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "type": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "predicted": {
+      "dtype": "bool",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 151940,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 76238,
+      "num_examples": 84,
+      "dataset_name": "email-spam-classification"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

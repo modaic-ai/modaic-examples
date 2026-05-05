@@ -4,7 +4,7 @@ import modaic
 
 class SpamClassifier(dspy.Signature):
     # The docstring of the dspy.Signature will be used in the system prompt of the Arbiter
-    """Classify the email as spam or not spam."""
+    """Classify the email as spam or not spam pretty please."""
 
     # Define input fields
     subject: str = dspy.InputField()
@@ -16,7 +16,7 @@ class SpamClassifier(dspy.Signature):
 
 # Create a an Arbiter by initializing a modaic.Predict with the defined Signature and using .as_arbiter
 classifier = modaic.Predict(
-    SpamClassifier, lm=modaic.SafeLM(model="together_ai/openai/gpt-oss-120b")
+    SpamClassifier, lm=modaic.SafeLM(model="modaic/openai/gpt-oss-120b")
 ).as_arbiter()
 
 # Lets run a quick example offline to see how the predict classifies an example
@@ -30,4 +30,4 @@ print("Messages:", result._messages)
 print("Outputs:", result._outputs)
 
 # Push arbiter to modaic hub (replace tyrin with your modaic username)
-classifier.push_to_hub("tyrin/spam-classification")
+classifier.push_to_hub("modaic/spam-classification-modaic2")

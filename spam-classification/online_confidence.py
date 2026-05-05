@@ -6,6 +6,7 @@ arbiter = Arbiter("tyrin/spam-classification")
 result = arbiter(
     subject="You won a free flight to paris",
     body="Dear Sir or Madam, \n We have been trying to contact you regarding your car's extended warranty",
+    compute_confidence=True,
 )
 
 print("Is Spam:", result.output.is_spam)

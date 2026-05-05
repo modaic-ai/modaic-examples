@@ -6,6 +6,6 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "datasets>=4.8.4",
-    "modaic>=0.31.1",
-    "modaic-client>=0.31.1"
+    "modaic>=0.36.3",
+    "modaic-client>=0.36.3"
 ]
