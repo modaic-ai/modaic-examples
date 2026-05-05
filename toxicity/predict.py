@@ -9,13 +9,16 @@ dataset = load_dataset("bench-llm/or-bench", "or-bench-toxic", split="train")
 # Randomly select 100 examples
 dataset = dataset.shuffle(seed=42).select(range(100))
 
-# Replace "tyrin" with your Modaic Hub username
-arbiter = Arbiter("tyrin/toxicity")
+# Replace "<username>" with your Modaic Hub username
+arbiter = Arbiter("<username>/toxicity")
 
 
 def add_prediction(row, idx):
-    result = arbiter.predict(message=row["prompt"])
-    row["prediction"] = result.output.category
+    try:
+        result = arbiter.predict(message=row["prompt"])
+        row["prediction"] = result.output.category
+    except Exception:
+        row["prediction"] = None
     row["example_id"] = idx
     return row
 

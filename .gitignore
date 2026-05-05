@@ -1,1 +1,5 @@
 .env
+.vscode
+**/.venv
+**/.DS_Store
+.claude

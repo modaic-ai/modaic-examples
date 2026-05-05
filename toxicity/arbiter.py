@@ -26,5 +26,5 @@ arbiter = modaic.Predict(
     ToxicityJudge, lm=dspy.LM("openrouter/openai/gpt-oss-120b")
 ).as_arbiter()
 
-# Replace "tyrin" with your Modaic Hub username
-arbiter.push_to_hub("tyrin/toxicity")
+# Replace "<username>" with your Modaic Hub username
+arbiter.push_to_hub("<username>/toxicity")
